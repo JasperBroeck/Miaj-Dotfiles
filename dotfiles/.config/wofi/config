@@ -1,0 +1,4 @@
+[settings]
+case-insensitive=true
+mode=drun
+allow_images=true
