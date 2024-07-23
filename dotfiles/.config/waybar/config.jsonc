@@ -1,0 +1,121 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "height": 45,
+    "spacing": 5,
+    "padding": 10,
+    "margin-left": 0,
+    "margin-right": 0,
+    
+    "modules-left": [
+        "cpu",
+        "memory",
+        "disk",
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+        "clock",
+    ],
+    "modules-right": [
+        "bluetooth",
+        "pulseaudio",
+        "network",
+        "battery"
+    ],
+   
+    "hyprland/workspaces": {
+	"format": "{name}: {icon}",
+	"format-icons": {
+		"1": "O",
+		"2": "O",
+		"3": "O",
+		"4": "O",
+		"active": "",
+		"default": ""
+	},
+	"sort-by-number": true,
+	"disable-scroll": true,
+	"all-outputs": true,
+	"tooltip": false,
+	 "persistent-workspaces": {
+             "*": [ 1, 2, 3, 4 ], // 4 workspaces by default on every monitor
+       }
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "on-click": "kitty btop"
+    },
+    "memory": {
+        "format": "{}% ",
+        "on-click": "kitty btop"
+    },
+    "disk": {
+        "format": "{used}/{total} ",
+        "on-click": "gnome-disks"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "on-click": "gnome-calendar"
+    },
+    "bluetooth": {
+        "on-click": "blueman-manager"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "network": {
+        // Set the correct interface, you might need to adjust this
+        "interface": "wlan0", // Replace with your actual Wi-Fi interface name
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "kitty nmtui"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "gnome-power-statistics"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "on-click": "spotify"
+    }
+}
+
