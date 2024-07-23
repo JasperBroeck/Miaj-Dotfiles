@@ -4,7 +4,7 @@ mkdir Downloads
 
 # Install programs using pacman
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm flatpak git curl wget btop nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
+sudo pacman -S --noconfirm hyprpaper flatpak git curl wget btop nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
 
 # Install AUR helper
 sudo pacman -S --noconfirm --needed base-devel git
@@ -34,7 +34,6 @@ flatpak install flathub com.vscodium.codium -y
 
 # Install theme, icons and cursors
 cd ~/Downloads
-git clone https://github.com/JasperBroeck/Miaj-Dotfiles
 git clone https://github.com/vinceliuice/Graphite-gtk-theme
 git clone https://github.com/vinceliuice/Fluent-icon-theme/
 paru -S bibata-cursor-theme-bin
