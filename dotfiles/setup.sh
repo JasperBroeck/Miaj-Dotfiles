@@ -19,6 +19,10 @@ sudo pacman -Syu --noconfirm
 # Install nwg-look-bin and minecraft
 paru -S minecraft-launcher
 paru -S nwg-look-bin
+paru -S balena-etcher
+paru -S woeusb
+
+sudo pacman -S jdk-openjdk
 
 # Install flatpak apps
 flatpak install flathub com.microsoft.Edge -y
@@ -33,6 +37,8 @@ flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.vscodium.codium -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
+flatpak install flathub com.rtosta.zapzap -y
+flatpak install flathub org.localsend.localsend_app -y
 
 # Install theme, icons and cursors
 cd ~/Downloads
