@@ -16,7 +16,8 @@ rm -rf paru
 source /etc/profile
 sudo pacman -Syu --noconfirm
 
-# Install nwg-look-bin
+# Install nwg-look-bin and minecraft
+paru -S minecraft-launcher
 paru -S nwg-look-bin
 
 # Install flatpak apps
@@ -27,10 +28,11 @@ flatpak install flathub org.audacityteam.Audacity -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.libreoffice.LibreOffice -y
-flatpak install flathub com.mojang.Minecraft -y
 flatpak install flathub io.github.ec_.Quake3e.OpenArena -y
 flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.vscodium.codium -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub com.valvesoftware.Steam -y
 
 # Install theme, icons and cursors
 cd ~/Downloads
