@@ -4,8 +4,8 @@ mkdir Downloads
 
 # Install programs using pacman
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm hyprpaper flatpak git curl wget btop nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
-
+sudo pacman -S --noconfirm hyprpaper flatpak git curl wget btop jdk-openjdk nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
+sudo pacman -Rns dolphin
 # Install AUR helper
 sudo pacman -S --noconfirm --needed base-devel git
 git clone https://aur.archlinux.org/paru.git
@@ -16,13 +16,11 @@ rm -rf paru
 source /etc/profile
 sudo pacman -Syu --noconfirm
 
-# Install nwg-look-bin and minecraft
+# Install programs using paru
 paru -S minecraft-launcher
 paru -S nwg-look-bin
 paru -S balena-etcher
 paru -S woeusb
-
-sudo pacman -S jdk-openjdk
 
 # Install flatpak apps
 flatpak install flathub com.microsoft.Edge -y
