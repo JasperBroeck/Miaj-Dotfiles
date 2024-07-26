@@ -77,4 +77,7 @@ cp starship.toml ~/.config/starship.toml
 
 cd
 
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+
 sudo reboot
