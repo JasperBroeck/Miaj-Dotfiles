@@ -4,7 +4,7 @@ mkdir Downloads
 
 # Install programs using pacman
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm hyprpaper flatpak git curl wget btop jdk-openjdk nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
+sudo pacman -S --noconfirm tlp-rdw hyprpaper flatpak git curl wget btop jdk-openjdk nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
 sudo pacman -Rns dolphin
 # Install AUR helper
 sudo pacman -S --noconfirm --needed base-devel git
@@ -79,5 +79,7 @@ cd
 
 sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
+sudo systemctl start tlp
+sudo systemctl enable tlp
 
 sudo reboot
