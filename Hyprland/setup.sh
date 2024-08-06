@@ -58,7 +58,7 @@ cd ..
 
 # System Installation
 cd Miaj-Dotfiles
-cd dotfiles
+cd Hyprland
 cp -r wallpaper/ ~/wallpaper/
 cp .bashrc ~/.bashrc
 cd .config/
