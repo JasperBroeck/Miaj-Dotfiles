@@ -4,7 +4,7 @@ mkdir Downloads
 
 # Install programs using pacman
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm tlp-rdw hyprpaper flatpak git curl wget btop jdk-openjdk nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
+sudo pacman -S --noconfirm tlp-rdw hyprpaper obsidian flatpak git curl wget btop jdk-openjdk nautilus kitty bluez bluez-utils blueman starship fastfetch nm-connection-editor networkmanager network-manager-applet netctl dialog gnome-text-editor grim slurp waybar wofi hyprland
 sudo pacman -Rns dolphin
 # Install AUR helper
 sudo pacman -S --noconfirm --needed base-devel git
@@ -21,22 +21,21 @@ paru -S minecraft-launcher
 paru -S nwg-look-bin
 paru -S balena-etcher
 paru -S woeusb
+paru -S spotify
 
 # Install flatpak apps
-flatpak install flathub com.microsoft.Edge -y
-flatpak install flathub md.obsidian.Obsidian -y
-flatpak install flathub io.gitlab.idevecore.Pomodoro -y
 flatpak install flathub org.audacityteam.Audacity -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub io.github.ec_.Quake3e.OpenArena -y
-flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.vscodium.codium -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.rtosta.zapzap -y
 flatpak install flathub org.localsend.localsend_app -y
+flatpak install flathub io.github.nokse22.Exhibit -y
+flatpak install flathub nl.emphisia.icon -y
 
 # Install theme, icons and cursors
 cd ~/Downloads
