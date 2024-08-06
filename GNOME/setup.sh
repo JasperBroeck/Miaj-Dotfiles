@@ -34,6 +34,8 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.rtosta.zapzap -y
 flatpak install flathub org.localsend.localsend_app -y
+flatpak install flathub io.github.nokse22.Exhibit -y
+flatpak install flathub nl.emphisia.icon -y
 
 # Install theme, icons and cursors
 cd ~/Downloads
