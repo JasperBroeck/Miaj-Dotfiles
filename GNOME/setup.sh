@@ -17,9 +17,11 @@ paru -S balena-etcher
 paru -S woeusb
 paru -S google-chrome
 paru -S spotify
+paru -S extension-manager
 
 # Install Waveform 12.5
-
+cd waveform/
+makepkg -si
 
 # Install flatpak apps
 flatpak install flathub org.audacityteam.Audacity -y
@@ -52,18 +54,12 @@ cd ..
 
 # System Installation
 cd Miaj-Dotfiles
-cd dotfiles
-cp -r wallpaper/ ~/wallpaper/
+cd GNOME
+cp wallpaper.jpg ~/Pictures/wallpaper.jpg
 cp .bashrc ~/.bashrc
 cd .config/
-rm -r ~/.config/hypr/
-cp -r hypr/ ~/.config/hypr/
 rm -r ~/.config/fastfetch/
 cp -r fastfetch/ ~/.config/fastfetch/
-rm -r ~/.config/kitty/
-cp -r kitty/ ~/.config/kitty/
-rm -r ~/.config/waybar/
-cp -r waybar/ ~/.config/waybar/
 rm -r ~/.config/wofi/
 cp -r wofi/ ~/.config/wofi/
 rm ~/.config/starship.toml
@@ -71,8 +67,6 @@ cp starship.toml ~/.config/starship.toml
 
 cd
 
-sudo systemctl start bluetooth
-sudo systemctl enable bluetooth
 sudo systemctl start tlp
 sudo systemctl enable tlp
 
